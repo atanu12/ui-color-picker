@@ -11,6 +11,8 @@ import DeepPurple from './components/DeepPurple';
 import Green from './components/Green';
 import Grey from './components/Grey';
 import Indigo from './components/Indigo';
+import LightGreen from './components/LightGreen';
+import LightBlue from './components/LignBlue';
 
 function App() {
   return (
@@ -29,7 +31,8 @@ function App() {
      <Green/>
      <Grey/>
      <Indigo/>
-
+     <LightGreen/>
+     <LightBlue/>
     </div>
   );
 }
