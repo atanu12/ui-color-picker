@@ -16,7 +16,7 @@ const Limit = () => {
 
   const [background, setBackground] = useState("#071415");
   const [current, setCurrent] = useState(null);
-
+  
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCurrent(null);
@@ -25,6 +25,7 @@ const Limit = () => {
   }, [current]);
   return (
     <div>
+        
       <div className="title">
         <h1>Limit Color</h1>
       </div>

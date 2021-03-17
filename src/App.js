@@ -19,14 +19,19 @@ import Teal from './components/Teal';
 import Limit from './components/Limit';
 import Yellow from './components/Yellow';
 import Orange from './components/Orange';
+import 'react-toastify/dist/ReactToastify.css'
+import {ToastContainer ,toast } from 'react-toastify';
 
 function App() {
+
+  const notify = () => toast.success("Copied");  
   return (
-    <div className="App">
+    <div className="App" >
       <div className="header">
         <h1>AM Color Picker</h1>
       </div>
-     <RedColor/>
+     <div className="colors" onClick={notify}>
+     <RedColor />
      <Pink/>
      <Purple/>
      <DeepPurple/>
@@ -45,7 +50,18 @@ function App() {
      <Brown/>
      <Grey/>
      <BlueGrey/>
-    
+     </div>
+     <ToastContainer
+position="top-center"
+autoClose={1100}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
     </div>
   );
 }
