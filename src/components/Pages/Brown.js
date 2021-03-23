@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect}  from 'react'
 import { CopyToClipboard } from "react-copy-to-clipboard";
-const Amber = () => {
-    const AmberColor =[
-        "#ffecb3","#ffe082",
-        "#ffd54f", "#ffca28", "#ffc107", "#ffb300", "#ffa000", "#ff8f00", "#ff6f00"
+import Header from '../Header';
+
+const Brown = () => {
+    const BrownColor =[
+        "#d7ccc8","#bcaaa4",
+        "#a1887f", "#8d6e63", "#795548", "#6d4c41", "#5d4037", "#4e342e", "#3e2723"
     ]
 
     const [background, setBackground] = useState("#071415");
@@ -17,11 +19,12 @@ const Amber = () => {
   }, [current]);
     return (
         <div >
+          <Header/>
         <div className="title">
-          <h1>Amber Color</h1>
+          <h1>Brown Color</h1>
         </div>
         <div className="container">
-          {AmberColor.map((color) => (
+          {BrownColor.map((color) => (
             <CopyToClipboard text={`${color}`} >
               <div key={color.id} className="card">
                 <div
@@ -50,4 +53,4 @@ const Amber = () => {
     )
 }
 
-export default Amber
+export default Brown

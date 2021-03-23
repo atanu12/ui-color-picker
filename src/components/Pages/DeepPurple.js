@@ -1,10 +1,11 @@
 import React, {useState, useEffect}  from 'react'
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Header from '../Header';
 
-const DeepOrange = () => {
-    const DeepOrangeColor =[
-        "#ffccbc","#ffab91",
-        "#ff8a65", "#ff7043", "#ff5722", "#f4511e", "#e64a19", "#d84315", "#bf360c"
+const DeepPurple = () => {
+    const DeepPurpleColor =[
+        "#d1c4e9","#b39ddb",
+        "#9575cd", "#7e57c2", "#673ab7", "#5e35b1", "#512da8", "#4527a0", "#311b92"
     ]
 
     const [background, setBackground] = useState("#071415");
@@ -18,11 +19,12 @@ const DeepOrange = () => {
   }, [current]);
     return (
         <div >
+          <Header/>
         <div className="title">
-          <h1>DeepOrange Color</h1>
+          <h1>DeepPurple Color</h1>
         </div>
         <div className="container">
-          {DeepOrangeColor.map((color) => (
+          {DeepPurpleColor.map((color) => (
             <CopyToClipboard text={`${color}`} >
               <div key={color.id} className="card">
                 <div
@@ -51,4 +53,4 @@ const DeepOrange = () => {
     )
 }
 
-export default DeepOrange
+export default DeepPurple

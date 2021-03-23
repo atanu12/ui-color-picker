@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Header from "../Header";
 
-const Purple = () => {
-  const PurpleColor = [
-    "#e1bee7",
-    "#ce93d8",
-    "#ba68c8",
-    "#ab47bc",
-    "#9c27b0",
-    "#8e24aa",
-    "#7b1fa2",
-    "#6a1b9a",
-    "#4a148c",
+const Green = () => {
+  const GreenColor = [
+    "#c8e6c9",
+    "#a5d6a7",
+    "#81c784",
+    "#66bb6a",
+    "#4caf50",
+    "#43a047",
+    "#388e3c",
+    "#2e7d32",
+    "#1b5e20",
   ];
 
   const [background, setBackground] = useState("#071415");
@@ -25,11 +26,12 @@ const Purple = () => {
   }, [current]);
   return (
     <div>
+      <Header/>
       <div className="title">
-        <h1>Purple Color</h1>
+        <h1>Green Color</h1>
       </div>
       <div className="container">
-        {PurpleColor.map((color) => (
+        {GreenColor.map((color) => (
           <CopyToClipboard text={`${color}`}>
             <div key={color.id} className="card">
               <div
@@ -40,7 +42,7 @@ const Purple = () => {
               ></div>
               <p
                 style={{
-                  color: "#fff",
+                    color: "#fff",
                   textTransform: "uppercase",
                 }}
                 onClick={() => setCurrent(color)}
@@ -51,9 +53,9 @@ const Purple = () => {
             </div>
           </CopyToClipboard>
         ))}
-      </div> 
+      </div>
     </div>
   );
 };
 
-export default Purple;
+export default Green;

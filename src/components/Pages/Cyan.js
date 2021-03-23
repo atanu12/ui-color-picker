@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Header from "../Header";
 
-const Grey = () => {
-  const GreyColor = [
-    "#f5f5f5",
-    "#eeeeee",
-    "#e0e0e0",
-    "#bdbdbd",
-    "#9e9e9e",
-    "#757575",
-    "#616161",
-    "#424242",
-    "#212121",
+const Cyan = () => {
+  const CyanColor = [
+    "#b2ebf2",
+    "#80deea",
+    "#4dd0e1",
+    "#26c6da",
+    "#00bcd4",
+    "#00acc1",
+    "#0097a7",
+    "#00838f",
+    "#006064",
   ];
 
   const [background, setBackground] = useState("#071415");
@@ -25,11 +26,12 @@ const Grey = () => {
   }, [current]);
   return (
     <div>
+      <Header/>
       <div className="title">
-        <h1>Grey Color</h1>
+        <h1>Cyan Color</h1>
       </div>
       <div className="container">
-        {GreyColor.map((color) => (
+        {CyanColor.map((color) => (
           <CopyToClipboard text={`${color}`}>
             <div key={color.id} className="card">
               <div
@@ -56,4 +58,4 @@ const Grey = () => {
   );
 };
 
-export default Grey;
+export default Cyan;

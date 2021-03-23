@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Header from "../Header";
 
-const LightGreen = () => {
-  const LightGreenColor = [
-    "#dcedc8",
-    "#c5e1a5",
-    "#aed581",
-    "#9ccc65",
-    "#8bc34a",
-    "#7cb342",
-    "#689f38",
-    "#558b2f",
-    "#33691e",
+const Indigo = () => {
+  const IndigoColor = [
+    "#c5cae9",
+    "#9fa8da",
+    "#7986cb",
+    "#5c6bc0",
+    "#3f51b5",
+    "#3949ab",
+    "#303f9f",
+    "#283593",
+    "#1a237e",
   ];
 
   const [background, setBackground] = useState("#071415");
@@ -25,11 +26,12 @@ const LightGreen = () => {
   }, [current]);
   return (
     <div>
+      <Header/>
       <div className="title">
-        <h1>LightGreen Color</h1>
+        <h1>Indigo Color</h1>
       </div>
       <div className="container">
-        {LightGreenColor.map((color) => (
+        {IndigoColor.map((color) => (
           <CopyToClipboard text={`${color}`}>
             <div key={color.id} className="card">
               <div
@@ -51,9 +53,9 @@ const LightGreen = () => {
             </div>
           </CopyToClipboard>
         ))}
-      </div> 
+      </div>
     </div>
   );
 };
 
-export default LightGreen;
+export default Indigo;

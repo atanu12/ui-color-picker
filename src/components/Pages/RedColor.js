@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
+import red from "@material-ui/core/colors/red";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Header from "../Header";
 
-const Cyan = () => {
-  const CyanColor = [
-    "#b2ebf2",
-    "#80deea",
-    "#4dd0e1",
-    "#26c6da",
-    "#00bcd4",
-    "#00acc1",
-    "#0097a7",
-    "#00838f",
-    "#006064",
+const RedColor =()=> {
+  const RedColor = [
+    red[100],
+    red[200],
+    red[300],
+    red[400],
+    red[500],
+    red[600],
+    red[700],
+    red[800],
+    red[900],
   ];
-
   const [background, setBackground] = useState("#071415");
   const [current, setCurrent] = useState(null);
 
@@ -23,37 +24,41 @@ const Cyan = () => {
     }, 1000);
     return () => clearTimeout(timeout);
   }, [current]);
+
   return (
-    <div>
+    <div >
+      <Header/>
       <div className="title">
-        <h1>Cyan Color</h1>
+        <h1>Red Color</h1>
       </div>
       <div className="container">
-        {CyanColor.map((color) => (
-          <CopyToClipboard text={`${color}`}>
+        {RedColor.map((color) => (
+          <CopyToClipboard text={`${color}`} >
             <div key={color.id} className="card">
               <div
                 style={{
                   background: color,
                 }}
                 className="box"
-              ></div>
-              <p
-                style={{
-                  color: "#fff",
-                  textTransform: "uppercase",
-                }}
-                onClick={() => setCurrent(color)}
-                className="para"
               >
-                {color}
-              </p>
+                
+              </div>
+              <p
+                  style={{
+                    color: "#fff",
+                    textTransform: "uppercase",
+                  }}
+                  onClick={() => setCurrent(color)}
+                  className="para"
+                >
+                  {color}
+                </p>
             </div>
           </CopyToClipboard>
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default Cyan;
+export default RedColor;

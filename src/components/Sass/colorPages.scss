@@ -1,0 +1,51 @@
+.container {
+  padding: 50px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  margin: 0 20px;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 12px;
+  transition: all 2000ms ease-in-out;
+}
+
+.para {
+  margin: 0.75em 2.5em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.box {
+  width: 10em;
+  height: 16em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+ 
+}
+@media (max-width:721px) {
+  .box{
+    width: 8em;
+    height: 10em;
+  }
+  .container{
+    margin: 0px;
+  }
+}
+@media (max-width:400px) {
+  .box{
+    width: 6em;
+    height: 8em;
+  }
+}
+.box:hover {
+  transform: scale(1.1);
+}
+.title{
+  h1{
+    color: #F5E8F0;
+    text-align: center;
+    font-size: 3em;
+  }
+}

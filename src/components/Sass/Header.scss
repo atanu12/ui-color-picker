@@ -1,0 +1,18 @@
+.main_header{
+    padding: 50px;
+    color: #F5E8F0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    .menu_header{
+        display: flex;
+        .menu_list{
+            margin-left: 50px;
+            color: #F5E8F0;
+            a{
+                color: #F5E8F0;
+                font-size: 2em;
+            }
+        }
+    }
+}

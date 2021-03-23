@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import './app.scss';
+@import './Header.scss';
+@import './colorPages.scss';
+@import './Home.scss';
+@import './Colors.scss';
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Redressed', cursive;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  
+  /* Track */
+//   ::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 5px grey; 
+//     border-radius: 10px;
+//   }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(231, 226, 222, 0.664); 
+    border-radius: 15px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(187, 173, 162, 0.664); 
+    width: 10px;
+  }

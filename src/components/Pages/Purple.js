@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Header from "../Header";
 
-const LightBlue = () => {
-  const LightBlueColor = [
-    "#b3e5fc",
-    "#81d4fa",
-    "#4fc3f7",
-    "#29b6f6",
-    "#03a9f4",
-    "#039be5",
-    "#0288d1",
-    "#0277bd",
-    "#01579b",
+const Purple = () => {
+  const PurpleColor = [
+    "#e1bee7",
+    "#ce93d8",
+    "#ba68c8",
+    "#ab47bc",
+    "#9c27b0",
+    "#8e24aa",
+    "#7b1fa2",
+    "#6a1b9a",
+    "#4a148c",
   ];
 
   const [background, setBackground] = useState("#071415");
@@ -25,11 +26,12 @@ const LightBlue = () => {
   }, [current]);
   return (
     <div>
+      <Header/>
       <div className="title">
-        <h1>LightBlue Color</h1>
+        <h1>Purple Color</h1>
       </div>
       <div className="container">
-        {LightBlueColor.map((color) => (
+        {PurpleColor.map((color) => (
           <CopyToClipboard text={`${color}`}>
             <div key={color.id} className="card">
               <div
@@ -56,4 +58,4 @@ const LightBlue = () => {
   );
 };
 
-export default LightBlue;
+export default Purple;

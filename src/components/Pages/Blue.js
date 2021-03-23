@@ -1,5 +1,6 @@
 import React, {useState, useEffect}  from 'react';
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Header from '../Header';
 
 const Blue = () => {
     const BlueColor      =[
@@ -18,6 +19,7 @@ const Blue = () => {
   }, [current]);
     return (
         <div >
+          <Header/>
         <div className="title">
           <h1>Blue Color</h1>
         </div>
