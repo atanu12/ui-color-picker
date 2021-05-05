@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import red from "@material-ui/core/colors/red";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Header from "../Header";
+import { ToastContainer, toast } from "react-toastify";
 
 const RedColor =()=> {
   const RedColor = [
@@ -17,6 +18,7 @@ const RedColor =()=> {
   ];
   const [background, setBackground] = useState("#071415");
   const [current, setCurrent] = useState(null);
+  const notify = ()=> toast.success("Color is Copied")
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -31,6 +33,17 @@ const RedColor =()=> {
       <div className="title">
         <h1>Red Color</h1>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="container">
         {RedColor.map((color) => (
           <CopyToClipboard text={`${color}`} >
@@ -40,6 +53,7 @@ const RedColor =()=> {
                   background: color,
                 }}
                 className="box"
+                onClick={notify}
               >
                 
               </div>
