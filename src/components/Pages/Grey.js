@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Header from "../Header";
-
+import { toast, ToastContainer } from "react-toastify";
 const Grey = () => {
   const GreyColor = [
     "#f5f5f5",
@@ -17,6 +17,7 @@ const Grey = () => {
 
   const [background, setBackground] = useState("#071415");
   const [current, setCurrent] = useState(null);
+  const notify = () => toast.success("Color Copied");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -26,10 +27,21 @@ const Grey = () => {
   }, [current]);
   return (
     <div>
-      <Header/>
+      <Header />
       <div className="title">
         <h1>Grey Color</h1>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="container">
         {GreyColor.map((color) => (
           <CopyToClipboard text={`${color}`}>
@@ -39,6 +51,7 @@ const Grey = () => {
                   background: color,
                 }}
                 className="box"
+                onClick={notify}
               ></div>
               <p
                 style={{
