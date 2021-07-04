@@ -30,7 +30,7 @@ const Colors = () => {
         {Color.map((color) => (
             <div className="main__container">
                 <div className="card">
-                    <Link to={color.name} >
+                    <Link to={color.name} style={{ textDecoration: 'none' }} >
                         <div className="box" style={{background: color.colors}}>
                         </div>
                         <div className="color_name">
